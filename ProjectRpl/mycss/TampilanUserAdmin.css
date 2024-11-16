@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    background: url('GambarPolnes.png') no-repeat center center/cover; /* Gambar sebagai background */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 20px; /* Menambah padding untuk layar kecil */
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 800px; /* Membatasi lebar maksimal */
+    width: 100%; /* Membuat overlay responsif */
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Memungkinkan tombol untuk membungkus di layar kecil */
+    margin-top: 20px;
+}
+
+.gambar1 {
+    width: 50px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    z-index:2;
+}
+
+.gambar2 {
+    width: 47px; /* Lebar gambar kedua */
+    height: auto; /* Tinggi otomatis */
+    position: absolute; /* Posisi absolut relatif terhadap container */
+    top: 15px; /* Jarak dari atas container */
+    left: 120px; /* Jarak dari kanan container */
+    z-index: 2; /* Memastikan gambar kedua di atas gambar pertama jika bertumpuk */
+}
+
+.btn {
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.admin {
+    background-color: #f2c12e; /* Kuning */
+}
+
+.mahasiswa {
+    background-color: #004aad; /* Biru */
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Media queries untuk perangkat yang lebih kecil */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .overlay {
+        padding: 30px;
+    }
+
+    .btn {
+        width: 100%; /* Tombol lebar penuh di perangkat kecil */
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .overlay {
+        padding: 20px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}

@@ -1,0 +1,239 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 50vh;
+    margin: 0;
+    flex-direction: row;
+}
+
+.container-fluid {
+    display: flex;
+    width: 100%;
+    padding: 0;
+}
+
+.sidebar {
+    width: 170px;
+    height: 110vh;
+    background-color: #1e1e1e;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start; 
+    padding: 10px;
+}
+
+.logo img {
+    margin-top: 30px;
+    width: 50px; 
+    margin-left: auto;  
+    margin-right: auto;
+    display: block;
+    margin-bottom: 70px; 
+}
+
+.menu {
+    margin-top: 20px;
+}
+
+.dashboard-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; 
+    border: none;
+    color: white;
+    text-align: center; 
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.dashboard-btn:hover, .logout-btn:hover {
+    background-color: #dddbea;
+}
+
+.logout-btn {
+    background-color: #5A5963;
+    color: white;
+    border: none; 
+    border-radius: 20px; 
+    padding: 10px 20px; 
+    font-size: 14px; 
+    cursor: pointer; 
+    margin-top: 250px;
+    transition: background-color 0.3s ease;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px 40px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    height: 100vh;
+
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 5px;
+}
+
+.item {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    font-size: 14px;
+
+}
+
+.item img {
+    width: 120px;
+    height: auto;
+}
+
+.user-info {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center; 
+    padding-right: 10px; 
+    
+    height: 50px; 
+    background-color: #f8f9fa; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+}
+
+.user-info img {
+    width: 40;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.user-info span {
+    margin-right: 3px;
+    font-size: 14px;
+    color: #000;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: auto; 
+}
+
+.item {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    transition: transform 0.3s ease;
+    font-size: 15px;
+}
+
+.item img{
+    width : 100px;
+    height: auto;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.quantity-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.quantity-control button {
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.quantity-control button:hover {
+    background-color: #0056b3;
+}
+
+.quantity-control span {
+    padding: 0 8px;
+    font-size: 12px;
+}
+
+.pinjam-btn {
+    background-color: #007bff; 
+    border: none; 
+    color: white; 
+    padding: 8px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    text-align: center; 
+    transition: background-color 0.3s ease; 
+    border-radius: 10px;
+    margin: 10px auto; 
+    display: block; 
+}
+
+.pinjam-btn:hover {
+    background-color: #0056b3;
+}
+
+.modal-header {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-bottom: none;
+}
+
+.modal-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-body ul li {
+    font-size: 16px;
+    padding: 5px 0;
+    border-bottom: 1px solid #000000;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+.modal-footer .btn-primary {
+    background-color: #0056b3;
+    border: none;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-footer .btn-primary:hover {
+    background-color: #717375;
+}
+
+.modal-footer .btn-close {
+    color: #6c757d;
+}
+
+

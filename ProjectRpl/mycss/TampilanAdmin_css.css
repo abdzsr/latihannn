@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+.sidebar {
+    width: 250px; /* Ukuran tetap untuk sidebar */
+    height: 100%;
+    position: fixed;
+    background-color: #343a40;
+}
+
+.user-info {
+    font-size: 1.1rem;
+}
+
+.user-avatar {
+    background-color: #ffc107;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-role {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.notification-icon {
+    position: relative;
+}
+
+.notification-icon i {
+    font-size: 1.5rem;
+}
+
+.notification-icon span {
+    font-size: 0.7rem;
+    padding: 0.2rem;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 50%;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.nav-link:hover {
+    background-color: #495057;
+    padding-left: 25px;
+}
+
+.main-content {
+    margin-left: 250px; /* Menjaga jarak dari sidebar */
+    padding: 40px;
+    overflow-y: auto; /* Scroll vertikal untuk konten */
+}
+
+.section {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateY(20px);
+    display: none;
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+}
+
+#dashboard-section h3, #dashboard-section p {
+    text-align: center;
+    margin-top: 50px;
+    color: #333;
+}
+
+.table {
+    background-color: white;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.badge {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+/* Tambahan untuk mencegah tenggelam di perangkat mobile */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0; /* Menghilangkan margin untuk layar kecil */
+        padding: 20px; /* Padding lebih sedikit */
+    }
+
+    .sidebar {
+        position: static; /* Mengubah posisi sidebar untuk tampilan mobile */
+        width: 100%; /* Mengatur sidebar agar lebar 100% */
+        height: auto; /* Menyesuaikan tinggi sidebar */
+    }
+}
